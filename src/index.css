@@ -1,0 +1,50 @@
+/* index.css */
+
+/* Reset & base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #4a3b2c;
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+/* Smooth text */
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Links: gentle peach-pink, pastel hover */
+a {
+  color: #f8c8dc;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: #f4a6bd;
+}
+
+/* Optional center #root content horizontally */
+#root {
+  display: flex;
+  justify-content: center;
+}
+
+/* Optional add a soft, subtle background texture effect */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: radial-gradient(circle at 30% 30%, rgba(255, 235, 245, 0.3) 0%, transparent 70%),
+              radial-gradient(circle at 70% 70%, rgba(255, 245, 230, 0.3) 0%, transparent 70%);
+  z-index: -1;
+}

@@ -1,0 +1,140 @@
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  padding: 20px;
+  box-sizing: border-box;
+  /* no justify-content center here, so content starts from top */
+}
+
+.app-container::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(-10%, -280%);
+  width: 160px;
+  height: 160px;
+  background-image: url('./usagi.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 1;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.app-container > * {
+  z-index: 1;
+  position: relative;
+}
+
+/* Add a big gap from the top for your image/header */
+.top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 120px; /* <-- large gap, change as needed */
+  margin-bottom: 20px;
+}
+
+
+h1 {
+  margin-bottom: 10px;
+  color: #4a3b2c;
+}
+
+.input-group {
+  display: inline-flex;
+  gap: 8px;
+}
+
+input {
+  padding: 8px 12px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  width: 250px;
+  box-sizing: border-box;
+}
+
+button {
+  cursor: pointer;
+  background-color: #fff1cb;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 14px;
+  font-size: 18px;
+  color: white;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #fff1cb;
+}
+
+.task-list {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0;
+  width: 100%;
+  max-width: 400px;
+  overflow-y: auto;
+  max-height: 300px; /* adjust height if you want */
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 5px 0;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  background: #fff;
+}
+
+.task-item span {
+  flex: 1;
+  text-align: center;
+  word-break: break-word;
+}
+
+.task-item:hover span {
+  text-decoration: line-through;
+}
+
+span.completed {
+  text-decoration: line-through;
+  color: #a18e89;
+}
+
+.delete-btn {
+  opacity: 0;
+  margin-left: 12px;
+  background-color: #fff1cb;
+  border: none;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  font-size: 14px;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.2s, background-color 0.2s, color 0.2s;
+}
+
+.task-item:hover .delete-btn {
+  opacity: 1;
+  color: white;
+  background-color: #fff1cb;
+}
+
+.delete-btn:hover {
+  background-color: #f8d4a5;
+  color: white
+}
