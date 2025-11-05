@@ -6,7 +6,6 @@
   position: relative;
   padding: 20px;
   box-sizing: border-box;
-  /* no justify-content center here, so content starts from top */
 }
 
 .app-container::before {
@@ -30,12 +29,11 @@
   position: relative;
 }
 
-/* Add a big gap from the top for your image/header */
 .top {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 120px; /* <-- large gap, change as needed */
+  margin-top: 120px; 
   margin-bottom: 20px;
 }
 
@@ -81,7 +79,7 @@ button:hover {
   width: 100%;
   max-width: 400px;
   overflow-y: auto;
-  max-height: 300px; /* adjust height if you want */
+  max-height: 300px; 
 }
 
 .task-item {
