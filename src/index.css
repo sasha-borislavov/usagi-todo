@@ -21,7 +21,7 @@ html {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Links: gentle peach-pink, pastel hover */
+
 a {
   color: #f8c8dc;
   text-decoration: none;
@@ -32,13 +32,13 @@ a:hover {
   color: #f4a6bd;
 }
 
-/* Optional center #root content horizontally */
+
 #root {
   display: flex;
   justify-content: center;
 }
 
-/* Optional add a soft, subtle background texture effect */
+
 body::before {
   content: "";
   position: fixed;
